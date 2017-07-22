@@ -1,5 +1,5 @@
 bui# Summary
 * [Index](piperline/index.md)
-* [Get Start](piperline/getting_start.md)
+* [Getting Start](piperline/getting-start.md)
 * [Jenkinsfile](piperline/jenkinsfile.md)
 
