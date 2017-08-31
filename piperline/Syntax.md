@@ -1,5 +1,5 @@
 # Pipeline语法
-## 声明式Piperline
+## 声明式Pipeline
 声明式Piperline是Jenkins Pipeline [1]的一个相对较新的补充，它在管道子系统之上提出了一种更为简化和有意义的语法。
 所有有效的声明性管道必须包含在Piperline块中，例如：
 ```Groovy
