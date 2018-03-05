@@ -1,11 +1,11 @@
 # Jenkinsfile
 创建一个Jenkinsfile,它被检入源代码控制.这样可以提供一些好处:
-- piperline上的代码审查/迭代
-- piperline的审计跟踪
+- pipeline上的代码审查/迭代
+- pipeline的审计跟踪
 - 管道的唯一真实来源,可以由项目中的多个成员查看和编辑(便于团队合作).
 
 ## 创建Jenkinsfile
-如“入门”部分所述，Jenkinsfile是一个包含Jenkins管道定义的文本文件，并被检入源代码控制。 考虑以下piperline，实施基本的三阶段连续输送piperline。
+如“入门”部分所述，Jenkinsfile是一个包含Jenkins管道定义的文本文件，并被检入源代码控制。 考虑以下pipeline，实施基本的三阶段连续输送pipeline。
 ```Groovy
 pipeline {
     agent any
@@ -29,8 +29,8 @@ pipeline {
     }
 }
 ```
-并非所有的管道都将具有相同的三个阶段，但是对于大多数项目来说，这是一个很好的起点。 以下部分将演示在Jenkins的测试安装中创建和执行简单的piperline。
->假设已经有一个项目的源码管理库，并且已经在Jenkins中按照说明定义了一个piperline
+并非所有的管道都将具有相同的三个阶段，但是对于大多数项目来说，这是一个很好的起点。 以下部分将演示在Jenkins的测试安装中创建和执行简单的pipeline。
+>假设已经有一个项目的源码管理库，并且已经在Jenkins中按照说明定义了一个pipeline
 
 使用文本编辑器，理想的是支持Groovy语法高亮显示的文本编辑器，在项目的根目录中创建一个新的Jenkins文件。
 
@@ -45,7 +45,7 @@ node {
     /* .. snip .. */
 }
 ```
-chechout步骤将从源代码控制中检出代码; scm是一个特殊变量，指示检出步骤克隆触发此piperline运行的特定版本。
+chechout步骤将从源代码控制中检出代码; scm是一个特殊变量，指示检出步骤克隆触发此pipeline运行的特定版本。
 
 ## Build
 对于大多数项目而言,piperline的"工作"的开始就是"build"阶段.通常,管道的这个阶段将是源码组装,编译或打包的地方.Jenkinsfile不能替代现有的构建工具,例如GNU/Make/Maven/Gradle等.而是将其视为粘合层来绑定项目开发生命周期的多个阶段(build,test,deploy,etc).
